@@ -15,7 +15,7 @@ module Peek
       end
 
       def query_reviewer_enabled?
-        peek_enabled? && cookies[:query_review_enabled]
+        peek_enabled? && Peek::QueryReviewer.enabled?
       end
     end
   end

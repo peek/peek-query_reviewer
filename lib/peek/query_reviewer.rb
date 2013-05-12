@@ -69,6 +69,10 @@ module Peek
     def self.disable!
       ::QueryReviewer.disable!
     end
+
+    def self.enabled?
+      Thread.current['query_reviewer_enabled'] == true
+    end
   end
 end
 
